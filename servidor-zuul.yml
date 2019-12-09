@@ -5,9 +5,9 @@ zuul:
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
        servicio-personas: # Service to create as sample
-        path: /personas/** #path that will be intercepted → path desde el zuul
+        path: /personas/** #path that will be intercepted 
         serviceId: servicio-personas
-      cliente-personas: # Service to create as sample
+       cliente-personas: # Service to create as sample
         path: /cliente/** #path that will be intercepted
         serviceId: cliente-personas    
 eureka:                  
