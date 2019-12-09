@@ -4,17 +4,13 @@ zuul:
   ignoredServices: '*'
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
-      servicio-vuelos: # Service to create as sample
-        path: /vuelos/** #path that will be intercepted
-        serviceId: servicio-vuelos
-      servicio-hoteles: # Service to create as sample
-        path: /hoteles/** #path that will be intercepted
-        serviceId: servicio-hoteles
-      servicio-reservas: # Service to create as sample
-        path: /reservas/** #path that will be intercepted
-        serviceId: servicio-reservas
-      
+       servicio-personas: # Service to create as sample
+        path: /personas/** #path that will be intercepted → path desde el zuul
+        serviceId: servicio-personas
+      cliente-personas: # Service to create as sample
+        path: /cliente/** #path that will be intercepted
+        serviceId: cliente-personas    
 eureka:                  
   client:
     serviceUrl:
-      defaultZone: http://10.2.4.25:8761/eureka
+      defaultZone: http://localhost:8761/eureka
