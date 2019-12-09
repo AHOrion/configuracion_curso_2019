@@ -4,12 +4,12 @@ zuul:
   ignoredServices: '*'
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
+      cliente-personas:
+        path: /cliente/**
+        serviceId: cliente-personas
       servicio-personas:
         path: /personas/**
-        serviceId: servicio-personas
-      cliente-personas: 
-        path: /cliente/**
-        serviceId: cliente-personas   
+        serviceId: servicio-personas      
 eureka:                  
   client:
     serviceUrl:
